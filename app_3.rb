@@ -13,8 +13,10 @@ print '> '
 
 my_game = Game.new(gets.chomp)
 
+my_game.new_players_in_sight
 while my_game.is_still_ongoing?
   my_game.human_player.show_state
+  my_game.new_players_in_sight
   my_game.menu
   my_game.menu_choice(gets.chomp)
   my_game.enemies_attack
